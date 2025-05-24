@@ -222,7 +222,7 @@ Actions                </TableCell>
           Edit Personal Information
         </h4>
         <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 lg:mb-7">
-          Update your details to keep your profile up-to-date.
+          Update your client details .
         </p>
       </div>
       <form className="flex flex-col">

@@ -81,13 +81,15 @@ export default function Requests() {
         phone: req.phone,
         authUid: req.authUid,
         requestType: req.requestType,
+        status:"approved",
         dateAccepted: new Date().toISOString(),
       });
       // Initialize Realtime DB node
       const refRtdb = rtdbRef(rtdb, `users/${req.cin}`);
       await rtdbSet(refRtdb, {
-        name: req.name,
-        greenhouse: { humidity: 0, temperature: 0, water_level: 0, ph: 0 },
+        name: req.cin,
+        greenhouse: { humidity: 0, temperature: 0, water_level: 0, ph: 0 , led:"off",ventilation:"off",water_pump
+          :"off"},
         greenenergy: { stored_energy: 0, energy_consumption: 0 },
       });
       // verify write (optional)
