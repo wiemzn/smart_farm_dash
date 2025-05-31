@@ -119,6 +119,7 @@ export default function Requests() {
           led: "OFF",
           ventilation: "OFF",
           water_pump: "OFF",
+          air_pump: "OFF",
           control_mode: "MANUAL",
         },
         greenenergy: {
@@ -245,7 +246,6 @@ export default function Requests() {
                       isHeader
                       className="px-4 py-3 font-medium text-gray-500 text-start text-sm dark:text-gray-400 w-1/8"
                     >
-                    
                       Status
                     </TableCell>
                     <TableCell
@@ -288,7 +288,6 @@ export default function Requests() {
                       <TableCell className="px-4 py-3 text-gray-500 text-sm dark:text-gray-400 w-1/8">
                         {formatDate(r.date)}
                       </TableCell>
-                     
                       <TableCell className="px-4 py-3 text-gray-500 text-start text-sm dark:text-gray-400 w-1/8">
                         <Badge size="badge" color={getBadgeColor(r.status)}>
                           {r.status}
